@@ -255,6 +255,98 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Movie Detail Page Styles */
+.movie-detail-card {
+    display: flex;
+    gap: 40px;
+    background-color: var(--dark-light);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.movie-detail-poster {
+    flex-shrink: 0; /* Чтобы постер не сжимался */
+    width: 300px;
+    height: 450px;
+    background-color: #2A2A40;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-detail-info {
+    flex-grow: 1; /* Чтобы блок с информацией занял всё оставшееся место */
+}
+
+.movie-detail-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--light);
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.movie-meta {
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+.movie-genres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+/* Мы можем переиспользовать стиль .movie-genre с главной страницы! */
+
+.movie-detail-desc {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.movie-director h4 {
+    font-size: 18px;
+    color: var(--light);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.movie-director p a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.movie-director p a:hover {
+    color: var(--primary-dark);
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .movie-detail-card {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .movie-detail-poster {
+        width: 100%;
+        height: auto; /* Высота будет подстраиваться под ширину */
+        aspect-ratio: 2 / 3; /* Сохраняем пропорции постера */
+    }
+
+    .movie-detail-title {
+        font-size: 28px;
+    }
+}
+
 @media (max-width: 768px) {
     .site-header .container {
         flex-direction: column;

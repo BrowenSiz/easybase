@@ -361,3 +361,24 @@ body {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
 }
+
+/* Static Page Styles */
+.static-page-content {
+    background-color: var(--dark-light);
+    padding: 30px;
+    border-radius: 12px;
+    /* max-width: 800px; */
+    margin: 0 auto;
+}
+
+.static-page-content p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: var(--text-light);
+}
+
+.static-page-content h2 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: var(--light);
+}

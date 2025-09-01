@@ -382,3 +382,35 @@ body {
     margin-bottom: 10px;
     color: var(--light);
 }
+
+/* Genres Section Styles */
+.genres-section {
+    margin-top: 40px;
+}
+
+.genres-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.genre-card {
+    background-color: var(--dark-light);
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.genre-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.genre-title {
+    color: var(--light);
+    font-size: 18px;
+    font-weight: 600;
+}

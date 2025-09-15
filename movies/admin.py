@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Genre, Movie, Director
+from .models import Genre, Movie, Director, Watchlist
 
 @admin.register(Movie)
 class MovieAdmin(admin.ModelAdmin):
@@ -32,3 +32,8 @@ class GenreAdmin(admin.ModelAdmin):
 @admin.register(Director)
 class DirectorAdmin(admin.ModelAdmin):
     pass
+
+@admin.register(Watchlist)
+class WatchlistAdmin(admin.ModelAdmin):
+    list_display = ('id', 'user', 'movie', 'watched_on')
+    list_filter = ('user', 'movie')

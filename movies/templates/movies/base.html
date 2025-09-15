@@ -23,7 +23,8 @@
                     <li><a href="{% url 'add_movie' %}">Добавить фильм</a></li>
 
                     {% if user.is_authenticated %}
-                        <li><span>Привет, {{ user.username }}!</span></li>
+                        <!-- <li><span>Привет, {{ user.username }}!</span></li> -->
+                        <li><a href="{% url 'profile' %}">Мой профиль</a></li>
                         <li><a href="{% url 'logout' %}">Выйти</a></li>
                     {% else %}
                         <li><a href="{% url 'register' %}">Регистрация</a></li>
